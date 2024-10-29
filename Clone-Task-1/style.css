@@ -1,106 +1,553 @@
 /* Import Google Fonts */
 /* General Reset */
-* {
+/* I imported the "Protest Guerrilla" and "Josefin Sans" font families from Google Fonts. */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Protest+Guerrilla&display=swap');
+
+/* This is the global styling used for the base lay-out and typography. */
+body {
+    font-family: 'Josefin Sans', sans-serif; /* Josefin Sans Font Family*/
+    background-color: #e9e9e9; /* The Page Background Colour */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-size: 16px;
 }
 
-/* Body styling */
-body {
-    font-family: 'Josefin Sans', sans-serif;
-    line-height: 1.6;
-    background-color: #f7f7f7;
-    padding: 12px;
+/* This will style the Header container by centering the content available. */
+.Header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Header styling */
-header {
-    text-align: center;
-    margin-bottom: 30px;
+/* Styling the Logo provided as 'logo.svg' */
+/* The logo (image) is set to "200px" wide. */
+.Logo img {
+    width: 200px;
+    height: auto;
 }
 
-.logo {
-    width: 80px; /* Small devices */
+/* Navigation */
+/* This will be responsible for centering the content. */
+nav {
+    display: flex;
+    justify-content: center;
 }
 
-.title {
-    font-family: 'Protest Guerrilla', sans-serif;
-    font-size: 2.5em; /* Base size for mobile */
+/* This styles the list items in the Navigation. These include removing the bulletpoint styling and default padding, displaying them in a row, and making sure that all content stays on a single line. */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    white-space: nowrap; 
 }
 
-/* Main article styling */
+/* This will set the font-size of the list items to 18px. */
+nav ul li {
+    font-size: 18px;
+}
+
+/* This styles the Anchor tags by setting their color to black and removing their underline. */
+nav ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+/* This is the styling used for the h1 and h2 tags. These include using the Protest Guerrilla font and setting its font-size to be three times larger than the default font size. */
+h1, h2 {
+    font-family: 'Protest Guerrilla'; /* Protest Guerrilla Font-family */
+    font-size: calc(3 * 1rem); /* Font-size three times larger than the default font size. */
+}
+
+/* This is to add the gray border or outline. */
 main {
-    max-width: 1200px;
-    margin: auto;
-    padding: 12px;
+    border: 1px solid gray; 
 }
 
-/* Author photo styling */
-.author-photo {
-    width: 100%;
-    max-width: 200px;
-    border-radius: 50%;
-    margin: 20px auto;
-    display: block;
+/* This is to set a White Content Background Colour to the container named ".Main-Heading-Container". */
+.Main-Heading-Container {
+    background-color: white; /* White Content Background Colour */
 }
 
-/* Gallery styling */
-.gallery {
+/* This sets the font-family used for the h1 tag within the ".Main-Heading-Container" container to Protest Guerrilla. */
+.Main-Heading-Container h1 {
+    font-family: 'Protest Guerrilla';
+}
+
+/* This sets or alignes the text within the ".Right-Padding" container to the left. */
+.Right-Padding {
+    text-align: left;
+}
+
+/* Headings Section (Three Headings) */
+/* This is the main container for the three headings. I set their columns to 3. */
+.Three-Headings-Main-Container {
+    column-count: 3;
+}
+
+/* This styles the ".Heading-Item-Container" container. I used a flexbox lay-out, stacked them vertically, and aligned them at the start. */
+.Heading-Item-Container {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-start;
+}
+
+/* I removed the default margin of the h2 tag within the ".Heading-Item-Container" container */
+.Heading-Item-Container h2 {
+    margin: 0; 
+    margin-top: 10px;
+}
+
+/* I also removed the default margin of the p tag within the ".Heading-Item-Container" container and aligned them to the left. */
+.Heading-Item-Container p {
+    text-align: left;
+    margin: 0;
+}
+
+
+/* Images Section */
+/* I used a Grid lay-out for this container and created 2 columns for the lay-out. I also removed the default margin and padding of the container.*/
+.Images-Main-Container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 12px;
-    margin-bottom: 30px;
+    grid-template-columns: 2fr 2fr; 
+    margin: 0; 
+    padding: 0;
+    width: 100%; 
 }
 
-.gallery img {
-    width: 100%;
-    border-radius: 8px;
+/* One Large Image */
+/* This styles the image within the ".One-Large-Image" container that ensures that it maintains its aspect ratio and behaves like a block element. */
+.One-Large-Image img {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+    margin: 0;
 }
 
-/* Responsive Styles */
-@media (min-width: 540px) {
+/* Four Small Images */
+/* I also used the Grid lay-out for this container but created 2 individual columns for the small images given. I also removed its defauled padding. */
+.First-Small-Images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    padding: 0; 
+}
+
+/* This styles the image within the "assets/articulation.jpg" container that will ensure that it maintains the aspect ratio and behaves as element. */
+.Second-Small-Image img {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+    margin: 0;
+}
+
+
+/* Author Section */
+/* I used a flexbox lay-out for the ".Author-Main-Container" container. */
+.Author-Main-Container {
+    display: flex;              
+    align-items: center;        
+    justify-content: center;     
+    flex-direction: row-reverse; /* This is to position the text on the left and the author's photo on the right. */
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+/* This sets the author's photo to "200" pixels wide and makes it round. */
+.Author-Photo-Container img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;          
+}
+
+/* This styling is used to ensure that the text takes up the remaining space. */
+.Author-Text-Container {
+    flex: 1;                     
+}
+
+/* This is to center align the h2 tag within the ".Author-Text-Container" container. */
+.Author-Text-Container h2 {
+    text-align: center;
+}
+
+/* Footer Section */
+/* This styles the footer of the website. This includes aligning the text in the center, adding a black background, and setting the text colour to white. */
+footer {
+    color: white;
+    background-color: #14181d;
+    text-align: center;
+}
+
+/* Media Query for Responsive code*/
+
+/* Media Query for Desktop layout (Viewport Width - 1024px and up, a.k.a. Desktop Screen) */
+@media (min-width: 1024px) {
+
+    /* Body */
+    /* This will center the body and its content to a fixed width of 1024 pixels. */
     body {
-        padding: 20px;
+        margin: auto;
+        width: 1024px;
     }
 
-    .logo {
-        width: 80px; /* Large devices */
+
+    /* Logo */
+    /* This sets 50 pixels of margin above the logo to add space. */
+    .Logo {
+        margin-top: 50px;
     }
 
-    .title {
-        font-size: 3em; /* Larger title for larger screens */
+
+    /* Navigation */
+    /* This sets 50 pixels of gap or space between the Navigation items */
+    nav ul {
+        gap: 50px; 
+    }
+
+
+    /* Main Container */
+    /* This sets 50 pixels of padding for the "".Main-Heading-Container" container. */
+    .Main-Heading-Container {
+        padding: 50px; 
+    }
+
+    /* This removes the default margin and sets the font-size to 130 pixels. */
+    .Main-Heading-Container h1 {
+        margin: 0;
+        font-size: 130px;
+    }
+    
+    /* This removes the default margin and sets the font-size to be three times larger than the default font size. */
+    .Sub-Heading p {
+        margin: 0;
+        font-size: calc(3 * 1rem);
+    }
+
+    /* This 170 pixels of padding to the right of the text. */
+    .Right-Padding p {
+        padding-right: 170px;
+    }
+
+
+    /* Three-Headings-Main-Container */
+    /* This sets 50 pixels of gap between the columns. */
+    .Three-Headings-Main-Container {
+        column-gap: 50px; 
+    }
+
+
+    /* Author Section */
+    /* This sets 50 pixels of padding to the ".Author-Main-Container" container and 50 pixels of gap between the image and text. */
+    .Author-Main-Container {
+        padding: 50px; 
+        gap: 50px; 
+    }
+
+    /* Footer */
+    /* This sets 50 pixels of padding to the footer */
+    footer {
+        padding: 50px; 
     }
 }
 
-@media (min-width: 720px) {
+
+/* Media Query for Tablets (Viewport Width - 720px to 1023px) */
+@media (min-width: 720px) and (max-width: 1023px) {
+
+    /* Body */
+    /* This centers the body and sets a fixed width of 720px pixels. */
     body {
+        margin: auto;
+        width: 720px;
+    }
+
+    
+    /* Logo */
+    /* This sets the image or Logo size to 80 pixels. 30 pixels of top margin is also set. */
+    .Logo img {
+        width: 80px;
+        height: auto;
+        margin-top: 30px;
+    }
+
+
+    /* Navigation */
+    /* This sets 30 pixels of gap or space between the Navigation items */
+    nav ul {
+        gap: 30px;
+    }
+
+
+    /* Main Container */
+    /* This aligns the text to the center when viewed in a tablet and sets 30 pixels of padding for the "".Main-Heading-Container" container. */
+    .Main-Heading-Container {
+        text-align: center;
         padding: 30px;
     }
 
-    .title {
-        font-size: 3.5em; /* Even larger title */
+    /* This removes the default margin and sets the font-size to be three times larger than the default font size. */
+    .Sub-Heading p {
+        margin: 0;
+        font-size: calc(3 * 1rem);
     }
 
-    .author-photo {
-        width: 150px; /* Larger author photo */
+    /* Make sures that the word "Frontier" is in a new line when viewed in tablet. */
+    .Sub-Heading span {
+        display: block;
+    }
+
+
+    /* Headings Section (Three (3) Headings) */
+    /* This sets the column to be 1 when viewed on tablet screens. There is also 30 pixels of gap between the columns. */
+    .Three-Headings-Main-Container {
+        column-count: 1;
+        column-gap: 30px;
+    }
+
+
+
+    /* Images Section */
+    /* A grid lay-out is used and stacked the images into one column. 30 pixels of gap was also set to give space between the images. */
+    .Images-Main-Container {
+        display: grid;
+        grid-template-columns: 1fr; 
+        gap: 30px;
+    }
+
+    /* This hides the Large image when viewed on a tablet. */
+    .One-Large-Image {
+        display: none;
+    }
+
+    /* This used a Grid lay-out and creates two columns for the first image a.k.a. "assets/encores-2.jpg". */
+    .First-Small-Image {
+        display: grid;
+        grid-template-columns: 2fr 2fr; 
+    }
+
+    /* This ensures that the images within the "assets/articulation.jpg" container maintains their aspect ratio. */
+    .Second-Small-Image img {
+        width: 100%; 
+        height: auto; 
+    }
+
+    /* This ensures that the images within the "assets/eulogy-for-evolution.jpg" container maintains their aspect ratio. */
+        .Third-Small-Image img {
+            width: 100%; 
+            height: auto; 
+        }
+    
+
+    /* This ensures that the images within the "assets/all-encores.jpg" container maintains their aspect ratio. */
+        .Fourth-Small-Image img {
+            width: 100%; 
+            height: auto; 
+        }
+
+
+    /* Author Section */
+    /* This sets 30 pixels of padding to the ".Author-Main-Container" container. */
+    .Author-Main-Container {
+        padding: 30px;
+    }
+
+    /* Footer Section */
+    /* This sets 30 pixels of padding to the footer */
+    footer {
+        padding: 30px; 
     }
 }
 
-@media (min-width: 1024px) {
-    body {
-        padding: 50px;
+
+/* Media Query for Large Mobiles (Viewport Width - 540px to 719px) */
+@media (min-width: 540px) and (max-width: 719px) {
+
+    /* Logo */
+    /* This sets the image or Logo size to 80 pixels. 20 pixels of top margin is also set. */
+    .Logo img {
+        width: 80px;
+        height: auto;
+        margin-top: 20px;
     }
 
-    .logo {
-        width: 200px; /* Desktop logo */
+    /* Navigation */
+    /* This sets 20 pixels of gap or space between the Navigation items */
+    nav ul {
+        gap: 20px; 
     }
 
-    .title {
-        font-size: 4em; /* Much larger title */
+    /* This sets the font-size of Anchor Tags to 16 pixels when viewed on large mobiles. */
+    nav ul li a {
+        font-size: 16px;
     }
 
-    .intro {
-        font-size: 1.2em; /* Larger intro paragraph */
+
+    /* This center aligns the text within the ".Main-Heading-Container" container and sets 20 pixels of padding. */
+    .Main-Heading-Container {
+        text-align: center;
+        padding: 20px; 
+    }
+
+    /* This removes the default margin and sets the font-size to be three times larger than the default font size. */
+    .Sub-Heading p {
+        margin: 0;
+        font-size: calc(3 * 1rem);
+    }
+
+    /* Make sures that the word "Frontier" is in a new line when viewed in tablet. */
+    .Sub-Heading span {
+        display: block;
+    }
+
+    /* This sets the column to 1 on large mobile screens and adds 20 pixels of gap or space between. */
+    .Three-Headings-Main-Container {
+        column-count: 1; 
+        column-gap: 20px; 
+    }
+
+
+    /* Images Section */
+    /* A grid lay-out is used and stacked the images into one column. 20 pixels of gap was also set to give space between the images. */
+    .Images-Main-Container {
+        display: grid;
+        grid-template-columns: 1fr; 
+        gap: 20px; 
+    }
+
+    /* This hides the Large image when viewed on a large mobile. */
+    .One-Large-Image {
+        display: none;
+    }
+
+    /* This used a Grid lay-out and displays the available images in a single column. */
+    .First-Small-Image {
+        display: grid;
+        grid-template-columns: 1fr; 
+    }
+
+    /* This ensures that the images within the ".Small-Image" container maintains their aspect ratio. */
+    .Second-Small-Image img {
+        width: 100%; 
+        height: auto; 
+    }
+
+    /* This ensures that the images within the ".Small-Image" container maintains their aspect ratio. */
+    .Third-Small-Image img {
+        width: 100%; 
+        height: auto; 
+    }
+
+    /* This ensures that the images within the ".Small-Image" container maintains their aspect ratio. */
+    .Fourth-Small-Image img {
+        width: 100%; 
+        height: auto; 
+    }
+
+
+    /* Author Section */
+    .Author-profile-Container {
+        flex-direction: column;   
+        text-align: center;       
+        padding: 20px;               
+
+    }
+    
+    /* This aligns the p tag or text within the ".Author-Text-Container" container to the left. */
+    .Author-Text-Container p {
+        text-align: left;
+    }
+
+
+    /* Footer Section */
+    /* This sets 20 pixels of padding to the footer */
+    footer {
+        padding: 20px; 
+    }
+}
+
+
+/* Media Query for Small mobile devices (Viewport Width - 360px to 539px) */
+@media (max-width: 539px) {
+   
+    /* Logo */
+    /* This sets the image or Logo size to 80 pixels, and 12px of the top margin. */
+    .Logo img {
+        width: 80px;
+        height: auto;
+        margin-top: 12px;
+    }
+
+    /* Navigation */
+    /* This sets 12 pixels of gap or space between the Navigation items */
+    nav ul {
+        gap: 12px; 
+    }
+
+    /* This sets the font-size of Anchor Tags to 14 pixels when viewed on small mobiles. */
+    nav ul li a {
+        font-size: 14px; /* Font size for small devices */
+    }
+
+
+    /* Images Section */
+    .Main-Heading-Container {
+        text-align: center;
+        padding: 12px; 
+    }
+
+    /* This removes the default margin and sets the font-size to be three times larger than the default font size. */
+    .Sub-Heading p {
+        margin: 0;
+        font-size: calc(3 * 1rem);
+    }
+    
+    /* This sets the column to 1 on small mobile screens and adds 12 pixels of gap or space between. */
+    .Three-Headings-Main-Container {
+        column-count: 1; 
+        column-gap: 12px; 
+    }
+
+    /* Images Section */
+    /* A grid lay-out is used and stacked the images into one column. 12 pixels of gap was also set to give space between the images. */
+    .Images-Main-Container {
+        display: grid;
+        grid-template-columns: 1fr; /* Stack images in one column */
+        gap: 12px; 
+    }
+
+    /* This hides the Large image when viewed on a small mobile. */
+    .One-Large-Image {
+        display: none; 
+    }
+
+    /* This used a Grid lay-out and displayed the 4 small images in a single column. */
+    .First-Small-Image {
+        display: grid;
+        grid-template-columns: 1fr; 
+    }
+
+    /* This will ensure that the content within the "Small-Image-Section" container maintains their aspect ratio. */
+    .Second-Small-Image img {
+        width: 100%; 
+        height: auto; 
+    }
+
+    /* Author Section */
+    .Author-Main-Container {
+        flex-direction: column;   
+        text-align: center;       
+        padding: 12px;               
+
+    }
+    
+    /* This aligns the p tag or text within the ".Author-Text-Container" container to the left. */
+    .Author-Text-Container p {
+        text-align: left;
+    }
+
+
+    /* Footer Section */
+    /* This sets 12 pixels for the padding of the footer */
+    footer {
+        padding: 12px; 
     }
 }
