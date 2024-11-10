@@ -1,0 +1,41 @@
+/* Reset margin and set default font for body */
+body {
+    margin: 0; /* Remove default margin */
+    font-family: Arial, sans-serif; /* Set font for the document */
+}
+
+/* Style for the navigation bar */
+.navbar {
+    background-image: url('layout-image/img-background.jpg'); /* Background image */
+    background-size: cover; /* Resize background to cover the entire nav */
+    background-position: center; /* Center the background image */
+    padding: 20px; /* Padding around the navbar */
+}
+
+/* Flexbox setup for the navigation links */
+.nav-links {
+    display: flex; /* Enable Flexbox layout */
+    justify-content: space-around; /* Even spacing between items */
+    list-style: none; /* Remove bullet points from list */
+    padding: 0; /* Remove padding from list */
+    margin: 0; /* Remove margin from list */
+}
+
+/* Style for each list item */
+.nav-links li {
+    margin: 0 15px; /* Margin between items */
+}
+
+/* Style for the anchor tags */
+.nav-links a {
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline from links */
+    padding: 10px 15px; /* Padding around text for clickable area */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for links */
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Light semi-transparent background on hover */
+    border-radius: 5px; /* Rounded corners for the hover effect */
+}
