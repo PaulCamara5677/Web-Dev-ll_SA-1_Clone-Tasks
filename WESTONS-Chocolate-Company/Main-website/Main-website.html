@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chocolate Company</title>
+    <link rel="stylesheet" href="Main-website-style.css">
+</head>
+<body>
+    <header>
+        <h1>Chocolate Company</h1>
+        <nav>
+            <ul>
+                <li><a href="#home" onclick="showPage('home')">Home</a></li>
+                <li><a href="#recommended" onclick="showPage('recommended')">Recommended Products</a></li>
+                <li><a href="#cart" onclick="showPage('cart')">Shopping Cart</a></li>
+                <li><a href="#contact" onclick="showPage('contact')">Contact Us</a></li>
+                <li><a href="#management" onclick="showPage('management')">Management</a></li>
+                <li><a href="#others" onclick="showPage('others')">Others</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="content">
+        <!-- Home Page -->
+        <div id="home" class="page active">
+            <div class="slideshow-container">
+                <div class="slide fade">
+                    <img src="CC-images/coco-square.jpg" alt="Chocolate Promo 1">
+                </div>
+                <div class="slide fade">
+                    <img src="CC-images/coco-dust.jpg" alt="Chocolate Promo 2">
+                </div>
+                <div class="slide fade">
+                    <img src="CC-images/coco-box.jpg" alt="Chocolate Promo 3">
+                </div>
+            </div>
+        </div>
+
+        <!-- Recommended Products Page -->
+        <div id="recommended" class="page">
+            <h2>Recommended Products</h2>
+            <div class="product-container">
+                <div class="product" onclick="addToCart('White Chocolate Bar', 5)">
+                    <img src="CC-images/coco-white.jpg" alt="Dark Chocolate Bar">
+                    <p>Dark Chocolate Bar - $5</p>
+                    <label for="quantity">Choose quantity:</label>
+                    <input type="number" id="quantity" value="1" min="1">
+                </div>
+                <div class="product" onclick="addToCart('Milk Chocolate Truffles', 8)">
+                    <img src="CC-images/coco-cups.jpg" alt="Milk Chocolate Truffles">
+                    <p>Milk Chocolate Truffles - $8</p>
+                    <label for="quantity">Choose quantity:</label>
+                    <input type="number" id="quantity" value="1" min="1">
+                </div>
+                <!-- Add more products similarly -->
+            </div>
+            <h3>Build Your Own Chocolate Box</h3>
+            <div class="build-box">
+                <div class="product" onclick="addToCart('Double Fudge Brownie', 6)">
+                    <img src="CC-images/coco-brownie-cutout.jpg" alt="Caramel Chocolate">
+                    <p>Caramel Chocolate - $6</p>
+                    <label for="quantity">Choose quantity:</label>
+                    <input type="number" id="quantity" value="1" min="1">
+                </div>
+            </div>
+        </div>
+
+        <!-- Shopping Cart Page -->
+        <div id="cart" class="page">
+            <h2>Your Shopping Cart</h2>
+            <ul id="cart-items"></ul>
+            <p id="total-price">Total: $0</p>
+        </div>
+
+        <!-- Contact Us Page -->
+        <div id="contact" class="page">
+            <h2>Contact Us</h2>
+            <p>Email: info@WESTONSChocolates.com</p>
+            <p>Phone: (123) 456-7890</p>
+        </div>
+
+        <!-- Management Page -->
+        <div id="management" class="page">
+            <h2>Management Team</h2>
+            <div class="management-container">
+                <div class="ceo">CEO: John </div>
+                <div class="associates">Associates: Jane Smith, Mike Johnson</div>
+                <div class="employees">Employees: Sarah Connor, Kyle Reese</div>
+            </div>
+        </div>
+
+        <!-- Others Page -->
+        <div id="others" class="page">
+            <h2>Others</h2>
+            <p>Thank you for viewing our webpage!</p>
+            <p>Trivia: Did you know chocolate was once used as currency?</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Chocolate Company. All rights reserved.</p>
+    </footer>
+
+    <script src="Main-website-script.js"></script>
+</body>
+</html>
