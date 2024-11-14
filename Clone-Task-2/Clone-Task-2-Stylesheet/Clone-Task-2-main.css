@@ -6,7 +6,7 @@
 
 /*Starting with the body color, background color is set in order to ease the eyes of the possible viewers in putting attention more to the given films to be watched rather than divert focus on an overcomplicated designed background or oversimplified black/white background color. */
 body {
-  background-color: #4dccbd;
+  background-color: #070410;
   margin: auto;
   font-family: "Lato", sans-serif;
 }
@@ -68,8 +68,8 @@ main {
 }
 
 .movie-container {
-  background-color: #231651;
-  color: #FFFFFF;
+  background-color: #EEF36A;
+  color: #070410;
   font-size: 1.5em;
   margin: 16px;
   box-shadow: 10px 10px 10px black;
