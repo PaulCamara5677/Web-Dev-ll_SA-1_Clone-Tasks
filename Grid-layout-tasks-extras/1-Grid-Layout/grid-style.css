@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* Sidebar and main content */
+    height: 100vh; /* Full height */
+}
+
+.sidebar {
+    background: #153916;
+    color: white;
+    padding: 1rem;
+}
+
+.main-content {
+    background: #f4f4f4;
+    padding: 1rem;
+}
+
+h1, h2 {
+    margin-bottom: 1rem;
+}
+
+p {
+    line-height: 1.6;
+}
