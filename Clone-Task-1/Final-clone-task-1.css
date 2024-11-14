@@ -129,7 +129,7 @@ main {
 }
 
 /* By styling the picture inside the "assets/articulation.jpg" container, you can make sure it keeps its aspect ratio and acts like an element. */
-.Example-Image img {
+.Example-Images img {
     width: 100%; 
     height: auto; 
     display: block; 
