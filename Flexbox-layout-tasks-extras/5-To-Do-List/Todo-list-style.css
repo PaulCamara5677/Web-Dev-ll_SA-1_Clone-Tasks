@@ -1,0 +1,82 @@
+/* Basic reset and body styles */
+body {
+    margin: 0; /* Remove default margin */
+    font-family: Arial, sans-serif; /* Set default font */
+    background-color: #f9f9f9; /* Light background color */
+}
+
+/* Container for the todo list */
+.todo-container {
+    max-width: 600px; /* Max width for the container */
+    margin: 50px auto; /* Center the container */
+    padding: 20px; /* Padding inside the container */
+    background-color: white; /* White background for the container */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Header styles */
+.header {
+    display: flex; /* Enable Flexbox layout */
+    justify-content: space-between; /* Space out title and button */
+    align-items: center; /* Center items vertically */
+}
+
+/* Title styles */
+h1 {
+    margin: 0; /* Remove default margin */
+    color: #333; /* Dark text color */
+}
+
+/* Button styles */
+#add-task-button {
+    background-color: #28a745; /* Green background color */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Padding for button */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+/* Hover effect for add task button */
+#add-task-button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Task list styles */
+.task-list {
+    display: flex; /* Enable Flexbox layout */
+    flex-direction: column; /* Stack tasks vertically */
+    margin-top: 20px; /* Space above task list */
+}
+
+/* Individual task styles */
+.task {
+    display: flex; /* Enable Flexbox for task */
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Space out checkbox, label, and button */
+    padding: 10px; /* Padding inside each task */
+    border-bottom: 1px solid #e0e0e0; /* Bottom border for separation */
+}
+
+/* Checkbox styles */
+.task input[type="checkbox"] {
+    margin-right: 10px; /* Space between checkbox and label */
+}
+
+/* Delete button styles */
+.delete-button {
+    background-color: #e74c3c; /* Red background color */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px 10px; /* Padding for button */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+/* Hover effect for delete button */
+.delete-button:hover {
+    background-color: #c0392b; /* Darker red on hover */
+}
