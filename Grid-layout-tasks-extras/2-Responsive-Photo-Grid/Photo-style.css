@@ -1,0 +1,97 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Gallery Title Styling */
+.gallery-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center;
+}
+
+/* Gallery container using CSS Grid */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Auto-fill columns */
+    gap: 20px; /* Space between gallery items */
+    max-width: 1200px; /* Limit the gallery width */
+    margin: 0 auto; /* Center gallery horizontally */
+}
+
+/* Individual gallery item styling */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Ensuring the images fill their containers with proper aspect ratio */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+/* Hover effect: Slightly enlarge the item */
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+/* Zoom-in effect on image on hover */
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Title overlay on image */
+.gallery-item::before {
+    content: attr(data-title);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px 15px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Smooth fade-in effect */
+}
+
+/* Show the title overlay on hover */
+.gallery-item:hover::before {
+    opacity: 1;
+}
+
+/* Responsive design: For small screen sizes */
+@media (max-width: 768px) {
+    /* Adjust the grid layout for smaller screens */
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Decrease image size */
+    }
+
+    /* Decrease title font size for smaller devices */
+    .gallery-title {
+        font-size: 2rem;
+    }
+}
