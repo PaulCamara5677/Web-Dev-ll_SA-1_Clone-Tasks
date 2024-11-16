@@ -38,6 +38,7 @@ function addToCart(item, price) {
     updateCart();
 }
 
+//gives Shopping Cart an interactive code.
 function updateCart() {
     const cartItems = document.getElementById('cart-items');
     cartItems.innerHTML = '';
